@@ -5,13 +5,13 @@ const ProfileDescription = () => (
     <View style={{ flexDirection: "row", alignItems: "center" }}>
       <Image
         style={styles.avatar}
-        source={require("./assets/SofyanAmrabat.jpg")}
+        source={require("../assets/Photo.jpg")}
       ></Image>
       <View style={styles.descriptionContainer}>
         <Text style={styles.descriptionTitle}>Descripción sobre mí!</Text>
         <Text>
-          Soy profe y me gusta mi trabajo aunque a veces me de por enrevesar
-          prácticas para mis queridos alumnos.
+          Soy estudiante de 2º Desarrollo de Aplicaciones Multiplataforma DAM.
+          Me gusta jugar a videojuegos, leer libros y escuchar musica.
         </Text>
       </View>
     </View>

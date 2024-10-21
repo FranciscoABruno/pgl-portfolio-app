@@ -1,9 +1,10 @@
 import { useState } from "react";
 import { Button, View, StyleSheet, Text } from "react-native";
 import QRCode from "react-native-qrcode-svg";
-import ButtonWithShadow from "./ButtonWithShadow";
-import ProfileDescription from "./ProfileDescription";
-import FavoriteItemList from "./FavoriteItemList";
+import ButtonWithShadow from "./components/ButtonWithShadow";
+import ProfileDescription from "./components/ProfileDescription";
+import FavoriteItemList from "./components/FavoriteItemList";
+import Ionicons from "react-native-vector-icons/Ionicons";
 
 export default function App() {
   const [displayMyQR, setDisplayMyQR] = useState(true);
@@ -11,7 +12,7 @@ export default function App() {
   return (
     <View style={styles.container}>
       <View style={styles.topContainer}>
-        <Text style={styles.firsttoprowContainer}>My Portfolio App</Text>
+        <Text style={styles.firsttoprowContainer}>MI PORFOLIO</Text>
         <View style={styles.rowTopSecondContainer}>
           <ButtonWithShadow
             onPress={() => setDisplayMyQR(true)}
@@ -22,6 +23,7 @@ export default function App() {
             title="Mi Repo"
             color="light-gray"
           />
+          <Ionicons name="chevron-forward-outline" size={20} color="white" />
         </View>
       </View>
       {displayMyQR ? (
@@ -32,7 +34,7 @@ export default function App() {
       ) : (
         <View style={styles.bodystails}>
           <View style={styles.CentrarcodigoQR}>
-            <QRCode value="https://github.com/adhernea" />
+            <QRCode value="https://github.com/FranciscoABruno" />
           </View>
         </View>
       )}
