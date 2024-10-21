@@ -21,7 +21,7 @@ const styles = StyleSheet.create({
   cosasQmeGustanMuxoEstails: {
     borderColor: "black",
     borderWidth: 1,
-    borderStyle: "dashed",
+    borderStyle: "solid",
     padding: 20,
     color: "darkred",
     textAlign: "center",
