@@ -17,7 +17,7 @@ import Ionicons from "react-native-vector-icons/Ionicons";
 
 export default function App() {
   const [displayMyQR, setDisplayMyQR] = useState(true);
-  const [displayGallery, setDisplayGallery] = useState(false);
+  const [displayProject, setDisplayProject] = useState(false);
 
   return (
     <ImageBackground
@@ -32,14 +32,14 @@ export default function App() {
             <ButtonWithShadow
               onPress={() => {
                 setDisplayMyQR(true);
-                setDisplayGallery(false);
+                setDisplayProject(false);
               }}
               title="Mi info"
             />
             <Button
               onPress={() => {
                 setDisplayMyQR(false);
-                setDisplayGallery(false);
+                setDisplayProject(false);
               }}
               title="Mi Repo"
               color="light-gray"
@@ -48,7 +48,7 @@ export default function App() {
 
             <Button
               onPress={() => {
-                setDisplayGallery(true);
+                setDisplayProject(true);
                 setDisplayMyQR(false);
               }}
               title="Proyectos"
@@ -57,9 +57,9 @@ export default function App() {
           </View>
         </View>
 
-        {displayGallery ? (
+        {displayProject ? (
           <View style={styles.bodystails}>
-            <ImageGallery />
+            <ImageProject />
           </View>
         ) : displayMyQR ? (
           <View style={styles.bodystails}>
@@ -78,20 +78,20 @@ export default function App() {
   );
 }
 
-const ImageGallery = () => {
+const ImageProject = () => {
   return (
     <ScrollView style={{ width: "100%" }}>
       <Image
         source={require("./assets/snow.jpg")}
-        style={styles.galleryImage}
+        style={styles.ProjectImage}
       />
       <Image
         source={require("./assets/landscape.jpg")}
-        style={styles.galleryImage}
+        style={styles.ProjectImage}
       />
       <Image
         source={require("./assets/building.jpg")}
-        style={styles.galleryImage}
+        style={styles.ProjectImage}
       />
     </ScrollView>
   );
@@ -139,7 +139,7 @@ const styles = StyleSheet.create({
   background: {
     flex: 1,
   },
-  galleryImage: {
+  ProjectImage: {
     width: "100%",
     height: 300,
     marginVertical: 10,
