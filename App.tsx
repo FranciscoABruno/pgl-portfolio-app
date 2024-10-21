@@ -32,14 +32,14 @@ export default function App() {
             <ButtonWithShadow
               onPress={() => {
                 setDisplayMyQR(true);
-                setDisplayGallery(false); // Ocultar galería
+                setDisplayGallery(false);
               }}
               title="Mi info"
             />
             <Button
               onPress={() => {
                 setDisplayMyQR(false);
-                setDisplayGallery(false); // Ocultar galería
+                setDisplayGallery(false);
               }}
               title="Mi Repo"
               color="light-gray"
