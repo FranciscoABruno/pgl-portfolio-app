@@ -20,16 +20,16 @@ const FavoriteItemList = () => (
 const styles = StyleSheet.create({
   cosasQmeGustanMuxoEstails: {
     width: 330,
-    borderColor: "black",
+    borderColor: "#14875e",
     borderWidth: 1.5,
     borderStyle: "solid",
     padding: 20,
-    color: "darkred",
+    color: "#14875e",
     textAlign: "center",
     fontWeight: "bold",
     fontStyle: "italic",
     fontSize: 16,
-    backgroundColor: "silver",
+    backgroundColor: "#fff",
   },
 });
 

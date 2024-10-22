@@ -27,7 +27,7 @@ export default function App() {
     >
       <View style={styles.container}>
         <View style={styles.topContainer}>
-          <Text style={styles.firsttoprowContainer}>MI PORFOLIO</Text>
+          <Text style={styles.firsttoprowContainer}>MI PORTFOLIO</Text>
           <View style={styles.rowTopSecondContainer}>
             <ButtonWithShadow
               onPress={() => {
@@ -109,7 +109,8 @@ const styles = StyleSheet.create({
     width: "100%",
   },
   firsttoprowContainer: {
-    backgroundColor: "gray",
+    backgroundColor: "#fff",
+    color: "#14875e",
     textAlign: "center",
     fontWeight: "bold",
     textAlignVertical: "center",
@@ -117,7 +118,7 @@ const styles = StyleSheet.create({
   },
   rowTopSecondContainer: {
     flexDirection: "row",
-    backgroundColor: "darkgray",
+    backgroundColor: "#14875e",
     justifyContent: "center",
     alignItems: "center",
   },

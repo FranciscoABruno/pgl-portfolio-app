@@ -9,7 +9,7 @@ const ProfileDescription = () => (
       ></Image>
       <View style={styles.descriptionContainer}>
         <Text style={styles.descriptionTitle}>Descripción sobre mí!</Text>
-        <Text>
+        <Text style={styles.descriptionText}>
           Soy estudiante de 2º Desarrollo de Aplicaciones Multiplataforma DAM.
           Me gusta jugar a videojuegos, leer libros y escuchar musica.
         </Text>
@@ -28,7 +28,7 @@ const styles = StyleSheet.create({
   },
   descriptionContainer: {
     margin: 10,
-    backgroundColor: "lightgray",
+    backgroundColor: "#21a875",
     padding: 10,
     borderRadius: 10,
     borderWidth: 1.5,
@@ -39,6 +39,10 @@ const styles = StyleSheet.create({
     textAlign: "center",
     fontWeight: "700",
     fontSize: 20,
+    color: "#fff",
+  },
+  descriptionText: {
+    color: "#fff",
   },
 });
 
