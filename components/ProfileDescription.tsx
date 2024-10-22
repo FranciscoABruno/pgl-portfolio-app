@@ -23,12 +23,16 @@ const styles = StyleSheet.create({
     height: 90,
     width: 90,
     borderRadius: 100,
+    borderWidth: 1.5,
+    borderColor: "#fff",
   },
   descriptionContainer: {
     margin: 10,
     backgroundColor: "lightgray",
     padding: 10,
     borderRadius: 10,
+    borderWidth: 1.5,
+    borderColor: "#fff",
     width: "70%",
   },
   descriptionTitle: {

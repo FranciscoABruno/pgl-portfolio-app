@@ -19,8 +19,9 @@ const FavoriteItemList = () => (
 
 const styles = StyleSheet.create({
   cosasQmeGustanMuxoEstails: {
+    width: 330,
     borderColor: "black",
-    borderWidth: 1,
+    borderWidth: 1.5,
     borderStyle: "solid",
     padding: 20,
     color: "darkred",

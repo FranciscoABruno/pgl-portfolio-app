@@ -21,7 +21,7 @@ export default function App() {
 
   return (
     <ImageBackground
-      source={require("./assets/sky.jpg")}
+      source={require("./assets/IMG-20241021-WA0038.jpg")}
       style={styles.background}
       resizeMode="cover"
     >
