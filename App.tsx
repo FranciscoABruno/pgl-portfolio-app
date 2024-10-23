@@ -76,7 +76,7 @@ export default function App() {
 
         <View style={styles.darkModeButtonContainer}>
           <Pressable style={styles.darkModeButton} onPress={toggleDarkMode}>
-            <Text style={styles.darkModeButtonText}>Cambiar Modo</Text>
+            <Text style={styles.darkModeButtonText}>Cambiar Tema</Text>
           </Pressable>
         </View>
 
