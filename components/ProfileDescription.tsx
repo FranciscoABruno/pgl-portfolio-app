@@ -1,13 +1,18 @@
 import { View, Text, Image, StyleSheet } from "react-native";
 
-const ProfileDescription = () => (
+const ProfileDescription = ({ darkMode }: { darkMode: boolean }) => (
   <View>
     <View style={{ flexDirection: "row", alignItems: "center" }}>
       <Image
         style={styles.avatar}
         source={require("../assets/Photo.jpg")}
       ></Image>
-      <View style={styles.descriptionContainer}>
+      <View
+        style={[
+          styles.descriptionContainer,
+          darkMode && styles.descriptionContainerDark,
+        ]}
+      >
         <Text style={styles.descriptionTitle}>Descripción sobre mí!</Text>
         <Text style={styles.descriptionText}>
           Soy estudiante de 2º Desarrollo de Aplicaciones Multiplataforma DAM.
@@ -34,6 +39,9 @@ const styles = StyleSheet.create({
     borderWidth: 1.5,
     borderColor: "#fff",
     width: "70%",
+  },
+  descriptionContainerDark: {
+    backgroundColor: "#181C14",
   },
   descriptionTitle: {
     textAlign: "center",

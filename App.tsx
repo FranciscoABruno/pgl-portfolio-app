@@ -1,5 +1,4 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 import {
   Button,
   View,
@@ -8,6 +7,7 @@ import {
   ImageBackground,
   Image,
   ScrollView,
+  Pressable,
 } from "react-native";
 import QRCode from "react-native-qrcode-svg";
 import ButtonWithShadow from "./components/ButtonWithShadow";
@@ -18,6 +18,11 @@ import Ionicons from "react-native-vector-icons/Ionicons";
 export default function App() {
   const [displayMyQR, setDisplayMyQR] = useState(true);
   const [displayProject, setDisplayProject] = useState(false);
+  const [darkMode, setDarkMode] = useState(false);
+
+  const toggleDarkMode = () => {
+    setDarkMode((prevMode) => !prevMode);
+  };
 
   return (
     <ImageBackground
@@ -27,8 +32,20 @@ export default function App() {
     >
       <View style={styles.container}>
         <View style={styles.topContainer}>
-          <Text style={styles.firsttoprowContainer}>MI PORTFOLIO</Text>
-          <View style={styles.rowTopSecondContainer}>
+          <Text
+            style={[
+              styles.firsttoprowContainer,
+              darkMode && styles.firsttoprowContainerDark,
+            ]}
+          >
+            MI PORTFOLIO
+          </Text>
+          <View
+            style={[
+              styles.rowTopSecondContainer,
+              darkMode && styles.rowTopSecondContainerDark,
+            ]}
+          >
             <ButtonWithShadow
               onPress={() => {
                 setDisplayMyQR(true);
@@ -57,14 +74,20 @@ export default function App() {
           </View>
         </View>
 
+        <View style={styles.darkModeButtonContainer}>
+          <Pressable style={styles.darkModeButton} onPress={toggleDarkMode}>
+            <Text style={styles.darkModeButtonText}>Cambiar Modo</Text>
+          </Pressable>
+        </View>
+
         {displayProject ? (
           <View style={styles.bodystails}>
             <ImageProject />
           </View>
         ) : displayMyQR ? (
           <View style={styles.bodystails}>
-            <ProfileDescription />
-            <FavoriteItemList />
+            <ProfileDescription darkMode={darkMode} />
+            <FavoriteItemList darkMode={darkMode} />
           </View>
         ) : (
           <View style={styles.bodystails}>
@@ -81,10 +104,7 @@ export default function App() {
 const ImageProject = () => {
   return (
     <ScrollView style={{ width: "100%" }}>
-      <Image
-        source={require("./assets/snow.jpg")}
-        style={styles.ProjectImage}
-      />
+      <Image source={require("./assets/snow.jpg")} style={styles.ProjectImage} />
       <Image
         source={require("./assets/landscape.jpg")}
         style={styles.ProjectImage}
@@ -113,14 +133,20 @@ const styles = StyleSheet.create({
     color: "#14875e",
     textAlign: "center",
     fontWeight: "bold",
-    textAlignVertical: "center",
     fontSize: 30,
+  },
+  firsttoprowContainerDark: {
+    backgroundColor: "#181C14",
+    color: "#fff",
   },
   rowTopSecondContainer: {
     flexDirection: "row",
     backgroundColor: "#14875e",
     justifyContent: "center",
     alignItems: "center",
+  },
+  rowTopSecondContainerDark: {
+    backgroundColor: "#181C14",
   },
   bodystails: {
     width: "100%",
@@ -144,5 +170,18 @@ const styles = StyleSheet.create({
     width: "100%",
     height: 300,
     marginVertical: 10,
+  },
+  darkModeButtonContainer: {
+    backgroundColor: "#14875e",
+  },
+  darkModeButton: {
+    backgroundColor: "#14875e", 
+    paddingVertical: 5,
+    paddingHorizontal: 5,
+    marginVertical: 5,
+  },
+  darkModeButtonText: {
+    color: "#fff",
+    fontWeight: "bold",
   },
 });

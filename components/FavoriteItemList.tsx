@@ -1,19 +1,19 @@
 import { ScrollView, Text, StyleSheet } from "react-native";
 
-const FavoriteItemList = () => (
+const FavoriteItemList = ({ darkMode }: { darkMode: boolean }) => (
   <ScrollView style={{ padding: 10 }}>
-    <Text style={styles.cosasQmeGustanMuxoEstails}>Jugar a juegos</Text>
-    <Text style={styles.cosasQmeGustanMuxoEstails}>Salir a pasear</Text>
-    <Text style={styles.cosasQmeGustanMuxoEstails}>Ir a la playa</Text>
-    <Text style={styles.cosasQmeGustanMuxoEstails}>Estar con mi familia</Text>
-    <Text style={styles.cosasQmeGustanMuxoEstails}>Escuchar música</Text>
-    <Text style={styles.cosasQmeGustanMuxoEstails}>La lluvia</Text>
-    <Text style={styles.cosasQmeGustanMuxoEstails}>Viajar</Text>
-    <Text style={styles.cosasQmeGustanMuxoEstails}>Leer libros</Text>
-    <Text style={styles.cosasQmeGustanMuxoEstails}>Ir de cena romántica</Text>
-    <Text style={styles.cosasQmeGustanMuxoEstails}>Peliculas</Text>
-    <Text style={styles.cosasQmeGustanMuxoEstails}>La comida</Text>
-    <Text style={styles.cosasQmeGustanMuxoEstails}>Series</Text>
+    <Text style={[styles.cosasQmeGustanMuxoEstails, darkMode && styles.cosasQmeGustanMuxoEstailsDark,]}>Jugar a juegos</Text>
+    <Text style={[styles.cosasQmeGustanMuxoEstails, darkMode && styles.cosasQmeGustanMuxoEstailsDark,]}>Salir a pasear</Text>
+    <Text style={[styles.cosasQmeGustanMuxoEstails, darkMode && styles.cosasQmeGustanMuxoEstailsDark,]}>Ir a la playa</Text>
+    <Text style={[styles.cosasQmeGustanMuxoEstails, darkMode && styles.cosasQmeGustanMuxoEstailsDark,]}>Estar con mi familia</Text>
+    <Text style={[styles.cosasQmeGustanMuxoEstails, darkMode && styles.cosasQmeGustanMuxoEstailsDark,]}>Escuchar música</Text>
+    <Text style={[styles.cosasQmeGustanMuxoEstails, darkMode && styles.cosasQmeGustanMuxoEstailsDark,]}>La lluvia</Text>
+    <Text style={[styles.cosasQmeGustanMuxoEstails, darkMode && styles.cosasQmeGustanMuxoEstailsDark,]}>Viajar</Text>
+    <Text style={[styles.cosasQmeGustanMuxoEstails, darkMode && styles.cosasQmeGustanMuxoEstailsDark,]}>Leer libros</Text>
+    <Text style={[styles.cosasQmeGustanMuxoEstails, darkMode && styles.cosasQmeGustanMuxoEstailsDark,]}>Ir de cena romántica</Text>
+    <Text style={[styles.cosasQmeGustanMuxoEstails, darkMode && styles.cosasQmeGustanMuxoEstailsDark,]}>Peliculas</Text>
+    <Text style={[styles.cosasQmeGustanMuxoEstails, darkMode && styles.cosasQmeGustanMuxoEstailsDark,]}>La comida</Text>
+    <Text style={[styles.cosasQmeGustanMuxoEstails, darkMode && styles.cosasQmeGustanMuxoEstailsDark,]}>Series</Text>
   </ScrollView>
 );
 
@@ -30,6 +30,10 @@ const styles = StyleSheet.create({
     fontStyle: "italic",
     fontSize: 16,
     backgroundColor: "#fff",
+  },
+  cosasQmeGustanMuxoEstailsDark: {
+    backgroundColor: "#181C14",
+    color: "#fff",
   },
 });
 
